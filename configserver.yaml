@@ -1,0 +1,5 @@
+
+security:
+  user:
+    name: configserver
+    password: '{cipher}AQBxTdsMqu1X1pGxfkwJCmWMYbabuhgAeZNhDDxEvlDFZzaxJWB1VSasqZjoQNN5iLfbz+WkoiJZV1y+Swp1ADRRtUR7P1+VifRQYJxgkgU971BD3p6B6qhvI0M0jAPPkbtn1kW9x3keidU9m4eK9NZa4YCwLaSqGgHditzAVYFi/3kvJSdNhNh78iQKkQfsl2SVS/LMQUXM11ZO04J9bfEIEyv+XV+gSDksLdXD1H9k6qCM4k8Zi7aXSMVTDdwAJ6Fixv7L1tGB2oy9IhGQjPOhCgV9kuJgxTDqzGOlKNarXjhF9wnL1WESCmKkPL5E3b1AV5fy0Hps6KGH/Ob3VUZq0yJ29h8I+ncFxz/2IGDfwsswhaKHOw9KzbjgvDdB5mZqYZfdDRytVAKzIi6ErcK5'

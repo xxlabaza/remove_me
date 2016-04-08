@@ -1,0 +1,17 @@
+
+security.basic.enabled: false
+
+zuul:
+  ignoredServices: "*"
+  prefix: /api
+  routes:
+    account-service:  /accounts/**
+    catalog_products:
+      path:       /products/**
+      serviceId:  catalog-service
+    catalog_products_customization:
+      path:       /customization-models/**
+      serviceId:  catalog-service
+    catalog_products_warranties:
+      path:       /product-warranties/**
+      serviceId:  catalog-service

@@ -1,0 +1,57 @@
+
+#
+# Common properties for all
+#
+
+info:
+  eureka:
+    region: ${eureka.client.region}
+    zone:   ${eureka.instance.metadataMap.zone}
+
+server:
+  port: 8888
+
+management:
+  context-path: '/admin'
+  security:
+    enabled: false
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    rabbit.enabled: true
+    sensitive: false # to see the health details
+
+spring:
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    bus:
+      enabled: true
+
+eureka:
+  name:     eurekaserver
+  password: '{cipher}AQAqNR5IKzLpuk3DeGAIXns8+Msk/ZiEklcMU+Btb2oNuMEJp45U3T4VwDU6N0yXBIiuyj0r9urKNSZipL0VO5+zqalavVtNUNFBe4f43dgC6lo0hf63aQvrcxJ347/zIsBJgyU6vjDNJfmy2bwoZoH3SVK5IRPM64GpLpXSGZie1GVW0LsH4OBx7ylbclJSl6O0ry3M1FTNqdRN693UVwWklCVJPzDQhWyHWM6wm5HxmF/nCSiYg2Y6fAN6Eq/XoDcXAyufDc5sWSvMP+4mTi/f2k8/qnjk/xtKhEiv/QqN6+RqVb3TmjcCEDeYmlmYoSauPlj3YbRQsPY2E/v6cCY1pGDwv/Z2dxhXKQh7RygvB3T7zaSh2CXfPoPsJghotDcTBDxwQnOeHR9XLdn7ffmq'
+  instance:
+    hostname: ${HOSTNAME:localhost} # try to get OS ENVIRONMENT variable
+    # preferIpAddress: true
+    statusPageUrlPath:  ${management.context-path}/info
+    healthCheckUrlPath: ${management.context-path}/health
+    metadataMap:
+      zone: ${spring.profiles.active:none} # active profile is zone name
+  client:
+    region: my_region
+    availabilityZones:
+      my_region: ${eureka.instance.metadataMap.zone},zone1,zone2 # list of available zones
+    serviceUrl:
+      defaultZone:  http://${eureka.name}:${eureka.password}@${eureka.zone1.host:localhost}:8888/eureka/
+      zone1:        http://${eureka.name}:${eureka.password}@${eureka.zone1.host:localhost}:8888/eureka/
+      zone2:        http://${eureka.name}:${eureka.password}@${eureka.zone2.host:localhost}:8888/eureka/
+
+ribbon.EnableZoneAffinity: true

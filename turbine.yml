@@ -1,0 +1,8 @@
+
+security.basic.enabled: false
+
+turbine:
+  instanceUrlSuffix: ${management.context-path}/hystrix.stream
+  aggregator:
+    clusterConfig: ZUUL
+  appConfig: zuul

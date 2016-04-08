@@ -1,0 +1,15 @@
+
+security:
+  user:
+    name:      admin
+    #   The password is encrypted by this:
+    #   http://cloud.spring.io/spring-cloud-config/spring-cloud-config.html#_encryption_and_decryption
+    #   the password is 'admin'
+    password: '{cipher}AQAIZ35alLpR+JgIdkwGw+ZzdQErrKwaVbOsY9530evwnQqrKVV+tSoc44qDmo6R/gyZQ6+8fMr2IEeAhClaYoAUvDDj/2pSWwY2acEEQLT/A2nNdaLVAdfZ415sjzY1pr8N1AO0lP/u1ZfXprkzGyB0h+rw+v8VSjYaBPtocYhWEQVPyPMFDUaXK9pIBvXSXGZQ4WgRZphUnQUiRiNesjlYkFTkzw/0TPVSYGUUZ1DvWZz523aNFPfLa9Kk3Arx11rQ+GX+kawIeafeIfjHEYX8X2qJEEYUxC4/nrj0jP2k6cOzfhI0nPACq+NDvMFkZ4QsIclc1GCPvQSuBPTrzLUj+xfKRd+cSqZyYTGdIesZS4qmJ8anb348oNytMsvF/R4='
+
+spring:
+  boot:
+    admin:
+      discovery:
+        management:
+          context-path: ${management.context-path}
