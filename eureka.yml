@@ -14,10 +14,6 @@ eureka:
     preferSameZone:     false
     fetchRegistry:      false
     registerWithEureka: false
-  server:
-    enableSelfPreservation:     false
-    waitTimeInMsWhenSyncEmpty:  0
-    numberRegistrySyncRetries:  0
 
 ---
 spring:
