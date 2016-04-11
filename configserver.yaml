@@ -1,4 +1,7 @@
 
+server:
+  port: 9000
+
 security:
   user:
     name: configserver

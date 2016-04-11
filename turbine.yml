@@ -1,4 +1,7 @@
 
+server:
+  port: 9004
+
 security.basic.enabled: false
 
 turbine:

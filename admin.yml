@@ -1,4 +1,7 @@
 
+server:
+  port: 9003
+
 security:
   user:
     name:      admin

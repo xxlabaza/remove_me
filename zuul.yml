@@ -1,4 +1,7 @@
 
+server:
+  port: 9002
+
 security.basic.enabled: false
 
 zuul:

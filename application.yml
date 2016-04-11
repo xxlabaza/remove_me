@@ -8,9 +8,6 @@ info:
     region: ${eureka.client.region}
     zone:   ${eureka.instance.metadataMap.zone}
 
-server:
-  port: 8888
-
 management:
   context-path: '/admin'
   security:
@@ -50,8 +47,8 @@ eureka:
     availabilityZones:
       my_region: ${eureka.instance.metadataMap.zone},zone1,zone2 # list of available zones
     serviceUrl:
-      defaultZone:  http://${eureka.name}:${eureka.password}@${eureka.zone1.host:localhost}:8888/eureka/
-      zone1:        http://${eureka.name}:${eureka.password}@${eureka.zone1.host:localhost}:8888/eureka/
-      zone2:        http://${eureka.name}:${eureka.password}@${eureka.zone2.host:localhost}:8888/eureka/
+      defaultZone:  http://${eureka.name}:${eureka.password}@${eureka.zone1.host:localhost}:9001/eureka/
+      zone1:        http://${eureka.name}:${eureka.password}@${eureka.zone1.host:localhost}:9001/eureka/
+      zone2:        http://${eureka.name}:${eureka.password}@${eureka.zone2.host:localhost}:9001/eureka/
 
 ribbon.EnableZoneAffinity: true
