@@ -40,6 +40,9 @@ eureka:
     # preferIpAddress: true
     statusPageUrlPath:  ${management.context-path}/info
     healthCheckUrlPath: ${management.context-path}/health
+    registryFetchIntervalSeconds:     30
+    leaseRenewalIntervalInSeconds:    30
+    # leaseExpirationDurationInSeconds: 5
     metadataMap:
       zone: ${spring.profiles.active:none} # active profile is zone name
   client:
