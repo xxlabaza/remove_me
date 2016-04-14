@@ -2,7 +2,7 @@
 server:
   port: 9004
 
-turbine.amqp.port: 9005
+turbine.amqp.port: 9014
 
 security.basic.enabled: false
 
