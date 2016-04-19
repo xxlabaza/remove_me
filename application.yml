@@ -27,7 +27,7 @@ spring:
     host:     ${rabbitmq.host:localhost}
     port:     5672
     username: guest
-    password: '{cipher}AQBHdI5PrFlsLE73B8P7kBnsPBrH0Mo1O0zInU2n83TVeaL7gWGHOzViEFsUU71BYm8X7qnIfb5LXU8Pr34JdKQzmn8189UfS9RhD/bI9/Ez+ARUU/Y46rNpfljmLLsxe7BwmzJBuDac4dqB1hSBBcqhp/XrdCiV7LY30Gr5/DMh3QeqztFdl2OkMXWBuuwxc5qPT6WseGCf5vlWLJ+Pn/NBcz0ayLOhkTk4S8Dv7NvEjYTVMfa8lRKZghVNAZ7rtsVtuN5b3sDPtfKd8M218tNryYfWjONK98OAEUMVukeMaJk1gQucUIozfRsojJ3L7BivM/BsDsmmttZ3Atb5Txl6x0vswaYVpGpc+mcZbkMfetgs/WgV2hxfKe0xh2kyFu4='
+    password: guest
   cloud:
     bus:
       enabled: true
