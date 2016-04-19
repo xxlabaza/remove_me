@@ -27,7 +27,7 @@ spring:
     host:     ${rabbitmq.host:localhost}
     port:     5672
     username: guest
-    password: guest
+    password: '{cipher}AQBHdI5PrFlsLE73B8P7kBnsPBrH0Mo1O0zInU2n83TVeaL7gWGHOzViEFsUU71BYm8X7qnIfb5LXU8Pr34JdKQzmn8189UfS9RhD/bI9/Ez+ARUU/Y46rNpfljmLLsxe7BwmzJBuDac4dqB1hSBBcqhp/XrdCiV7LY30Gr5/DMh3QeqztFdl2OkMXWBuuwxc5qPT6WseGCf5vlWLJ+Pn/NBcz0ayLOhkTk4S8Dv7NvEjYTVMfa8lRKZghVNAZ7rtsVtuN5b3sDPtfKd8M218tNryYfWjONK98OAEUMVukeMaJk1gQucUIozfRsojJ3L7BivM/BsDsmmttZ3Atb5Txl6x0vswaYVpGpc+mcZbkMfetgs/WgV2hxfKe0xh2kyFu4='
   cloud:
     bus:
       enabled: true
@@ -37,12 +37,10 @@ eureka:
   password: '{cipher}AQAqNR5IKzLpuk3DeGAIXns8+Msk/ZiEklcMU+Btb2oNuMEJp45U3T4VwDU6N0yXBIiuyj0r9urKNSZipL0VO5+zqalavVtNUNFBe4f43dgC6lo0hf63aQvrcxJ347/zIsBJgyU6vjDNJfmy2bwoZoH3SVK5IRPM64GpLpXSGZie1GVW0LsH4OBx7ylbclJSl6O0ry3M1FTNqdRN693UVwWklCVJPzDQhWyHWM6wm5HxmF/nCSiYg2Y6fAN6Eq/XoDcXAyufDc5sWSvMP+4mTi/f2k8/qnjk/xtKhEiv/QqN6+RqVb3TmjcCEDeYmlmYoSauPlj3YbRQsPY2E/v6cCY1pGDwv/Z2dxhXKQh7RygvB3T7zaSh2CXfPoPsJghotDcTBDxwQnOeHR9XLdn7ffmq'
   instance:
     hostname: ${HOSTNAME:localhost} # try to get OS ENVIRONMENT variable
-    # preferIpAddress: true
     statusPageUrlPath:  ${management.context-path}/info
     healthCheckUrlPath: ${management.context-path}/health
     registryFetchIntervalSeconds:     30
     leaseRenewalIntervalInSeconds:    30
-    # leaseExpirationDurationInSeconds: 5
     metadataMap:
       zone: ${spring.profiles.active:none} # active profile is zone name
   client:
